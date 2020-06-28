@@ -19,7 +19,7 @@ let port = process.env.PORT || 3030;
 let serverJSON = {
     IP,
     PORT: port,
-    serverName: "Kolonia Testowa",
+    serverName: "TEST SERVER" || process.env.SERVER_NAME,
     maxPlayers: Math.floor(Math.random() * Math.floor(16)),
     currentMap: "Valley",
     players: []

@@ -13,7 +13,8 @@ const interval = setInterval(()=>{
         for(let i = 0; i < 4; i++){
             const process = child_process.fork(modulePath, [], {
                 env: {
-                    PORT: config.STARTING_PORT + i
+                    PORT: config.STARTING_PORT + i,
+                    SERVER_NAME: `Test server #${i}, PLEASE DON'T CONNECT`
                 }
             })
             process.on('error', (err) =>{
